@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: "Pinyon Script", serif;
+    color: #fa3e88;
+    font-weight: 400;
+    font-size: 100 px;
+    font-style: normal;
+    justify-content: center;
+    margin: 50px;
+  }
+
+/* Style the body */
+body {
+  background-color: #143f6b;
+  margin: 10px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+
+/* Style the piano to use flex box */
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4); 
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  height: 400px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.black {
+  --width: 60px;
+  height: 240px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right:  calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.white.active {
+    background-color: #ccc;
+  }
+  
+  .black.active {
+    background-color: #333;
+  }
